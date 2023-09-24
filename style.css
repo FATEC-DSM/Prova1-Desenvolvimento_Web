@@ -12,22 +12,107 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+.cabecalho {
+  background-color: #1D733b;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding-inline: 16px;
+}
+
+.cabecalho > a > img {
+  height: 50px;
+}
+.cabecalho-logo{
+  padding: 10px;
+}
+.cabecalho-nav-item {
+  list-style: none;
+  display: inline-block;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  padding: 5px 8px;
+  transition: all ease .3s;
+}
+.cabecalho-nav-item:hover{
+  background-color: #255937;
+  border-radius: 5px;
+}
+.cabecalho-nav-item > li{
+  padding-left: 20px;
+}
+a { 
+  color: inherit; 
+} 
+.foto-fatec{
+  min-height: 100%;
+  background-image: url(Image/fachada-fatec.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 600px;
+}
+
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main {
+  padding-inline: 20px ;
+}
+
+.titulo-curriculo{
+  color: #255937;
+  margin: 20px;
+  margin-top: 100px;
+}
+.titulo-curriculo h2{
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
 .secao-membro {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     gap: 25px;
     background-color: rgba(219, 216, 216, 0.733);
-    padding-left: 150px;
-    padding-right: 150px;
+    margin: 50px 0px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 50px auto;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.foto-membro {
-    width: 320px;
-    height: 350px;
-    object-fit: cover;
+.secao-membro:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.secao-membro:nth-child(even) h2 {
+  text-align: right;
 }
 
+.secao-membro .secao-membro-foto{
+  width: 320px;
+  height: 350px;
+}
+
+.secao-membro .secao-membro-desc{
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  text-align: justify;
+  flex: 1;
+}
+.secao-membro div:nth-child(2) p{
+  margin-top: 10px;
+  line-height: 170%;
+  font-size: 16px;
+}
+  
 .nome-membro{
     font-family: 'Open Sans', sans-serif;
     font-size: 30px;
@@ -38,54 +123,8 @@ body {
 .sobre-membro{
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
-    padding-right: 15px;
 }
 
-.cabecalho {
-    background-color: #1D733b;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-}
-
-.cabecalho > a > img {
-    height: 50px;
-}
-.cabecalho-logo{
-    padding: 10px;
-}
-.cabecalho-nav-item {
-    list-style: none;
-    display: inline-block;
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    padding: 10px;
-}
-.cabecalho-nav-item:hover{
-    background-color: #255937;
-    border-radius: 5px;
-}
-.cabecalho-nav-item > li{
-    padding-left: 20px;
-}
-a { 
-    color: inherit; 
-} 
-.foto-fatec{
-    min-height: 100%;
-    background-image: url(Image/fachada-fatec.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 600px;
-}
-.titulo-curriculo{
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    color: #255937;
-    margin: 20px;
-    font-size: 20px;
-}
 footer{
     width: 100%;
     height: 50px;
@@ -97,3 +136,26 @@ footer{
     margin-top: 50px;
 }
 
+@media (max-width: 1007px) {
+
+  .secao-membro, .secao-membro:nth-child(even) {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    max-width: 600px;
+  }
+  
+  .secao-membro h2, .secao-membro:nth-child(even) h2 {
+    text-align: center;
+  }
+  
+  .secao-membro p {
+    text-align: center;
+  }
+  
+}
+@media (max-width: 500px) {
+  .secao-membro .secao-membro-foto{
+    width: 100%;
+  }
+}

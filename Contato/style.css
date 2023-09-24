@@ -9,94 +9,123 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+h2{
+  text-align: center;
+  color: #255937;
+}
+
+a { 
+  color: inherit; 
+}
+
+input {
+  font-size: 15px;
+  padding: 20px 5px 5px;
+  width: 100%;
+  border: 1px solid #255937;
+  border-radius: 5px;
+}
+
+label{
+  color: #255937;
+  font-size: 20px;
+  font: bold;
+}
+
+button{
+  color: white;
+  background-color: #255937;
+  border: none;
+  margin-top: 10px;
+  height: 40px;
+  width: 130px;
+  font-size: 17px;
+}
+
+.cabecalho {
+  background-color: #1D733b;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding-inline: 16px;
+}
+
+.cabecalho > a > img {
+  height: 50px;
+}
+.cabecalho-logo{
+  padding: 10px;
+}
+
+.cabecalho-nav-item {
+list-style: none;
+display: inline-block;
+color: white;
+font-family: 'Open Sans', sans-serif;
+padding: 5px 8px;
+transition: all ease .3s;
+}
+
+.cabecalho-nav-item:hover{
+  background-color: #255937;
+  border-radius: 5px;
+}
+.cabecalho-nav-item > li{
+  padding-left: 20px;
+} 
+
 .formulario{
-    width: 40%;
     margin: 0 auto;
     background-color: #f2f2f2;
     border: 1px solid #255937;
     border-radius: 5px;
     margin-top: 50px;
+    margin: 20px auto;
+    max-width: 800px;
 }
-h2{
-    text-align: center;
-    color: #255937;
-}
+
 .margin-forms{
     margin: 50px;
     padding: 30px;
 }
 
-
-input {
-    font-size: 15px;
-    padding: 20px 5px 5px;
-    width: 100%;
-    border: 1px solid #255937;
-    border-radius: 5px;
+.servico, .satisfacao{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0px;
 }
 
-footer{
-    width: 100%;
-    height: 50px;
-    background-color: #255937;
-    color:#f2f2f2;
+.servico input[type=checkbox],
+.satisfacao input[type=radio]{
+  width: auto;
+}
+
+.enviar{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
-}
+} 
 
-label{
-    color: #255937;
-    font-size: 20px;
-    font: bold;
-}
-.checkbox{
+footer{
+  width: 100%;
+  height: 50px;
+  background-color: #255937;
+  color:#f2f2f2;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} 
-button{
-    color: white;
-    background-color: #255937;
-    border: none;
-    margin-top: 10px;
-    height: 40px;
-    width: 130px;
-    font-size: 17px;
-}
-.cabecalho {
-    background-color: #1D733b;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
+  margin-top: 50px;
 }
 
-.cabecalho > a > img {
-    height: 50px;
-}
-.cabecalho-logo{
-    padding: 10px;
-}
+@media (max-width: 500px){
+  .formulario{
+    margin: 10px;
+    margin-top: 30px;
+  }
 
-.cabecalho-nav-item {
-    list-style: none;
-    display: inline-block;
-    color: white;
+  .margin-forms{
+    margin: 10px;
     padding: 10px;
+  }
 }
-.cabecalho-nav-item:hover{
-    background-color: #255937;
-    border-radius: 5px;
-}
-.cabecalho-nav-item > li{
-    padding-left: 20px;
-}
-a { 
-    color: inherit; 
-} 
